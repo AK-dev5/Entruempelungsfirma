@@ -1,4 +1,4 @@
-/* Grundlegende Einstellungen */
+/* Globale Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,26 +6,29 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Poppins', sans-serif; /* Modernere Schriftart */
+    background: linear-gradient(135deg, #2d2d2d, #1f1f1f); /* Gradient für den Hintergrund */
+    color: #e1e1e1;
     line-height: 1.6;
 }
 
 /* Header */
 header {
-    background-color: #333;
+    background-color: transparent; /* Transparent für coolen Effekt */
     color: white;
     padding: 20px 0;
-    text-align: center;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Stärkerer Schatten */
 }
 
-header h1 {
-    margin: 0;
+header .logo h1 {
+    text-align: center;
     font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 nav ul {
@@ -36,45 +39,58 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 25px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
+    color: #fff;
+    font-size: 1.1rem;
     text-transform: uppercase;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #FFD700;
+    color: #1abc9c; /* Türkis für den Hover-Effekt */
+    transform: translateY(-5px); /* Schwebeneffekt */
 }
 
 /* Hero Section */
 .hero {
+    background: url('https://images.unsplash.com/photo-1548390912-14ed9d9c1b1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg5MnwzNjk2fHxwb3J0cmFpdHx8fHx8fHwxNjc4MzM1Mjc1&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: white;
-    padding: 80px 20px;
-    background: url('https://source.unsplash.com/1600x900/?cleaning') no-repeat center center/cover;
     background-attachment: fixed;
-    transition: background 0.5s ease;
-    animation: fadeIn 2s ease-in-out;
+    position: relative;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-content {
+    z-index: 2;
+    animation: slideIn 1s ease-out;
 }
 
 .hero h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
+    font-weight: bold;
+    animation: zoomIn 2s ease-out;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Schatten für mehr Tiefe */
 }
 
-.hero img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    font-weight: 300;
 }
 
 .cta-button {
-    background-color: #FF6347;
+    background-color: #1abc9c;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -82,72 +98,99 @@ nav ul li a:hover {
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Schattierung für Button */
 }
 
 .cta-button:hover {
-    background-color: #e53e3e;
+    background-color: #16a085;
+    transform: scale(1.1); /* Button-Skalierung */
 }
 
-/* Services */
+/* Services Section */
 .services {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
+    background-color: #1c1c1c;
 }
 
 .services h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    color: #1abc9c;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .service-item {
     display: inline-block;
     width: 30%;
-    margin: 20px;
+    margin: 15px;
     text-align: center;
-    transition: transform 0.3s ease;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #333;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(26, 188, 156, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
 }
 
 .service-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.service-item:hover::before {
+    width: 0;
+    height: 0;
 }
 
 .service-item img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
-    transition: opacity 0.3s ease;
+    margin-bottom: 15px;
 }
 
-.service-item h3 {
-    margin-top: 10px;
-    font-size: 1.5rem;
-}
-
-/* Gallery */
+/* Gallery Section */
 .gallery {
-    background-color: #f4f4f4;
-    padding: 60px 20px;
+    padding: 80px 20px;
+    background-color: #111;
     text-align: center;
 }
 
 .gallery h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    color: #1abc9c;
 }
 
 .gallery-grid {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .gallery-item {
-    width: 23%;
-    margin: 10px;
+    width: 48%;
+    margin-bottom: 20px;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -164,10 +207,10 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #222;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 footer p {
@@ -175,10 +218,42 @@ footer p {
 }
 
 footer a {
-    color: #FFD700;
+    color: #1abc9c;
     text-decoration: none;
 }
 
 footer a:hover {
     color: white;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
