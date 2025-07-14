@@ -1,61 +1,87 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kijamet & Riess Entrümpelung</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <h1 class="title">Kijamet & Riess</h1>
-    <p class="subtitle">Entrümpelung leicht gemacht – Clearing made easy</p>
+  <header>
+    <h1>Kijamet & Riess</h1>
+    <p>Entrümpelung in München – Schnell. Sauber. Zuverlässig.</p>
+    <nav>
+      <a href="#services">Leistungen</a>
+      <a href="#about">Über uns</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
   </header>
 
-  <section class="intro">
-    <h2>Unsere Dienstleistungen / Our Services</h2>
+  <section id="hero">
+    <h2>Professionelle Entrümpelung in München</h2>
+    <p>Wir machen Platz für Neues – ob Wohnung, Keller oder Büro!</p>
+    <a href="#contact" class="btn">Kostenloses Angebot anfordern</a>
+  </section>
+
+  <section id="services" class="fade-in">
+    <h2>Unsere Leistungen / Our Services</h2>
+    <div class="services-grid">
+      <div class="card">
+        <h3>Haushaltsauflösung</h3>
+        <p>Wir übernehmen komplette Haushaltsauflösungen – diskret und sorgfältig.</p>
+      </div>
+      <div class="card">
+        <h3>Keller- & Garagenentrümpelung</h3>
+        <p>Wir schaffen Platz in Ihren Nebenräumen – schnell und zuverlässig.</p>
+      </div>
+      <div class="card">
+        <h3>Firmenauflösung</h3>
+        <p>Büros, Läden, Werkstätten – wir räumen alles für Sie aus.</p>
+      </div>
+      <div class="card">
+        <h3>Wohnungsentrümpelung</h3>
+        <p>Ob Messiwohnung oder Umzug – wir helfen professionell weiter.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="fade-in">
+    <h2>Über Uns / About Us</h2>
     <p>
-      Wir bieten professionelle Entrümpelungen für Wohnungen, Häuser, Büros und mehr. Egal ob Keller, Dachboden oder komplette Haushaltsauflösung – wir sind für Sie da. <br>
-      We provide professional clearing services for apartments, houses, offices and more. Whether it's a basement, attic or a full household clearance – we're here for you.
+      Kijamet & Riess ist Ihr freundliches Entrümpelungsteam mit Sitz in München.
+      Wir legen Wert auf faire Preise, transparente Angebote und saubere Arbeit.
+      Vertrauen Sie auf unsere langjährige Erfahrung im Bereich Entrümpelung und Haushaltsauflösungen.
+    </p>
+    <p>
+      We are a professional and friendly team based in Munich, helping you clean out spaces with care and efficiency. 
+      Whether private or commercial – we’re here to help!
     </p>
   </section>
 
-  <section class="services">
-    <div class="card">Kostenlose Besichtigung<br><span>Free Inspection</span></div>
-    <div class="card">Schnelle Terminvergabe<br><span>Fast Scheduling</span></div>
-    <div class="card">Umweltgerechte Entsorgung<br><span>Eco-friendly Disposal</span></div>
-    <div class="card">Faire Festpreise<br><span>Fair Fixed Prices</span></div>
-  </section>
-
-  <section class="contact" id="kontakt">
-    <h2>Kontaktieren Sie uns / Contact Us</h2>
+  <section id="contact" class="fade-in">
+    <h2>Kontakt aufnehmen / Contact Us</h2>
     <form action="mailto:aidkijamet22@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Ihr Name / Your Name" required>
-      <input type="email" name="email" placeholder="Ihre E-Mail / Your Email" required>
-      <textarea name="message" placeholder="Ihre Nachricht / Your Message" required></textarea>
-      <button type="submit">Senden / Send</button>
+      <label for="name">Ihr Name / Your Name</label>
+      <input type="text" id="name" name="Name" required>
+
+      <label for="email">Ihre E-Mail / Your Email</label>
+      <input type="email" id="email" name="Email" required>
+
+      <label for="message">Ihre Nachricht / Your Message</label>
+      <textarea id="message" name="Message" rows="5" required></textarea>
+
+      <button type="submit">Nachricht senden</button>
     </form>
-    <p class="contact-info">Oder rufen Sie uns an: <strong>+49 172 8653183</strong></p>
+    <div class="contact-info">
+      <p>📍 München, Deutschland</p>
+      <p>📧 aidkijamet22@gmail.com</p>
+      <p>📞 +49 172 8653183</p>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Kijamet & Riess Entrümpelung. Alle Rechte vorbehalten.
+    <p>&copy; 2025 Kijamet & Riess – Entrümpelung München</p>
   </footer>
-
-  <script>
-    // Animations on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    });
-
-    document.querySelectorAll('.card, .intro, .contact').forEach(el => {
-      observer.observe(el);
-    });
-  </script>
 </body>
 </html>
