@@ -5,241 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professionelle Entrümpelungsdienste - Entrümpeln leicht gemacht!">
     <title>Entrümpelungsservice Aid Kijamet</title>
-    <style>
-        /* Globale Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        header .logo h1 {
-            text-align: center;
-            font-size: 2rem;
-            text-transform: uppercase;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #ff6347;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: url('https://images.unsplash.com/photo-1561948955-4efb5ac64cd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg5MnwzNjk2fHxwb3J0cmFpdHx8fHx8fHwxNjc4MzM1Mjc1&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            background-attachment: fixed;
-            position: relative;
-            animation: fadeIn 2s ease-out;
-        }
-
-        .hero-content {
-            z-index: 2;
-            animation: slideIn 1s ease-out;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            animation: zoomIn 2s ease-out;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .cta-button {
-            background-color: #ff6347;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            font-size: 1.2rem;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: background-color 0.3s ease;
-            border-radius: 5px;
-        }
-
-        .cta-button:hover {
-            background-color: #e53e3e;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 80px 20px;
-            text-align: center;
-            background-color: #fff;
-        }
-
-        .services h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-        }
-
-        .service-item {
-            display: inline-block;
-            width: 30%;
-            margin: 15px;
-            text-align: center;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .service-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        /* Gallery Section */
-        .gallery {
-            padding: 80px 20px;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-
-        .gallery h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-        }
-
-        .gallery-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .gallery-item {
-            width: 48%;
-            margin-bottom: 20px;
-            overflow: hidden;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        footer p {
-            margin: 10px 0;
-        }
-
-        footer a {
-            color: #ff6347;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: white;
-        }
-
-        /* Animation */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideIn {
-            0% {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes zoomIn {
-            0% {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Header -->
     <header>
         <div class="logo">
             <h1>Entrümpelungsservice Aid Kijamet</h1>
@@ -249,13 +19,12 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Dienstleistungen</a></li>
                 <li><a href="#gallery">Galerie</a></li>
-                <li><a href="#about">Über uns</a></li>
                 <li><a href="#contact">Kontakt</a></li>
-                <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h2>Entrümpeln leicht gemacht!</h2>
@@ -264,43 +33,54 @@
         </div>
     </section>
 
+    <!-- Services Section -->
     <section id="services" class="services">
         <h2>Unsere Dienstleistungen</h2>
         <div class="service-item">
-            <img src="https://images.unsplash.com/photo-1561948955-4efb5ac64cd2" alt="Wohnungsentrümpelung">
+            <img src="images/wohnungsentruempelung.jpg" alt="Wohnungsentrümpelung">
             <h3>Wohnungsentrümpelung</h3>
             <p>Wir bieten Ihnen eine schnelle und effiziente Entrümpelung für Ihre Wohnung, vom Keller bis zum Dachboden.</p>
         </div>
         <div class="service-item">
-            <img src="https://images.unsplash.com/photo-1590071883062-bb9447be8b9d" alt="Büroentrümpelung">
+            <img src="images/bueroentruempelung.jpg" alt="Büroentrümpelung">
             <h3>Büroentrümpelung</h3>
             <p>Entrümpeln Sie Ihr Büro effizient und stressfrei – wir helfen Ihnen, Platz für Produktivität zu schaffen!</p>
         </div>
         <div class="service-item">
-            <img src="https://images.unsplash.com/photo-1607063023482-c83fcac31c4c" alt="Haushaltsauflösungen">
+            <img src="images/haushaltsaufloesung.jpg" alt="Haushaltsauflösungen">
             <h3>Haushaltsauflösungen</h3>
             <p>Wir bieten Haushaltsauflösungen in jeder Größenordnung an. Diskret und zuverlässig!</p>
         </div>
     </section>
 
+    <!-- Gallery Section -->
     <section id="gallery" class="gallery">
         <h2>Unsere Galerie</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1587246704385-b62b9cc07f0b" alt="Bild 1">
+                <img src="images/bild1.jpg" alt="Bild 1">
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1590071462645-4bc3bb25525f" alt="Bild 2">
+                <img src="images/bild2.jpg" alt="Bild 2">
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1594180107671-0209ca13a58f" alt="Bild 3">
+                <img src="images/bild3.jpg" alt="Bild 3">
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1588160637009-e4b3834f8e1b" alt="Bild 4">
+                <img src="images/bild4.jpg" alt="Bild 4">
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Kontakt</h2>
+        <p>Wenn Sie Fragen haben oder unseren Service in Anspruch nehmen möchten, erreichen Sie uns unter:</p>
+        <p><strong>E-Mail:</strong> <a href="mailto:kontakt@aidkijamet.de">kontakt@aidkijamet.de</a></p>
+        <p><strong>Telefon:</strong> <a href="tel:+491234567890">+49 123 4567890</a></p>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Entrümpelungsservice Aid Kijamet. Alle Rechte vorbehalten.</p>
         <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
