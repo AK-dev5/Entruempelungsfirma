@@ -3,22 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professionelle Entrümpelungsdienste. Wir helfen Ihnen, Ordnung zu schaffen!">
-    <title>Entrümpelungsservice - Aid Kijamet</title>
+    <meta name="description" content="Professionelle Entrümpelungsdienste - Entrümpeln leicht gemacht!">
+    <title>Entrümpelungsservice Aid Kijamet</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        // Zufällige Inhalte für dynamische Gestaltung
+        // Dynamische Inhalte für zufällige Slogans und Farben
         const slogans = [
             "Entrümpeln leicht gemacht!",
             "Mehr Platz, mehr Freiheit!",
-            "Kommen Sie zum Ziel – mit uns!",
-            "Effiziente Entrümpelung für Ihr Zuhause!"
-        ];
-
-        const serviceDescriptions = [
-            "Wir kümmern uns um die Entrümpelung Ihrer Wohnung, Garage, Keller oder Büro.",
-            "Professionelle Haushaltsauflösungen und Haushaltsentrümpelungen, schnell und zuverlässig.",
-            "Schaffen Sie Platz für Neues – wir erledigen das Entrümpeln für Sie!"
+            "Effizient und schnell – Ihr Entrümpelungsservice!",
+            "Lassen Sie uns Ihre Last tragen!"
         ];
 
         const buttonTexts = [
@@ -27,15 +21,11 @@
             "Entrümpeln lassen"
         ];
 
-        const colors = [
-            "#FF6347", "#32CD32", "#1E90FF", "#FFD700"
-        ];
-
         const images = [
-            "https://via.placeholder.com/1600x600/FF6347/ffffff?text=Entrümpelung+1",
-            "https://via.placeholder.com/1600x600/32CD32/ffffff?text=Entrümpelung+2",
-            "https://via.placeholder.com/1600x600/1E90FF/ffffff?text=Entrümpelung+3",
-            "https://via.placeholder.com/1600x600/FFD700/ffffff?text=Entrümpelung+4"
+            "https://source.unsplash.com/1600x900/?cleaning",
+            "https://source.unsplash.com/1600x900/?declutter",
+            "https://source.unsplash.com/1600x900/?office-cleanup",
+            "https://source.unsplash.com/1600x900/?house-clearance"
         ];
 
         function getRandomElement(arr) {
@@ -43,22 +33,9 @@
         }
 
         window.onload = function() {
-            // Zufälligen Slogan setzen
+            // Zufälligen Slogan und Button setzen
             document.getElementById("slogan").innerText = getRandomElement(slogans);
             document.getElementById("cta-button").innerText = getRandomElement(buttonTexts);
-
-            // Zufällige Dienstleistungsbeschreibung
-            const services = document.querySelectorAll(".service-item p");
-            services.forEach(service => {
-                service.innerText = getRandomElement(serviceDescriptions);
-            });
-
-            // Zufällige Farben setzen
-            const randomColor = getRandomElement(colors);
-            document.body.style.backgroundColor = randomColor;
-            document.querySelectorAll('.cta-button').forEach(btn => {
-                btn.style.backgroundColor = randomColor;
-            });
 
             // Zufälliges Bild für die Hero Section
             document.getElementById("hero-img").src = getRandomElement(images);
@@ -74,8 +51,10 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Dienstleistungen</a></li>
+                <li><a href="#gallery">Galerie</a></li>
                 <li><a href="#about">Über uns</a></li>
                 <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
     </header>
@@ -89,29 +68,47 @@
     <section id="services" class="services">
         <h2>Unsere Dienstleistungen</h2>
         <div class="service-item">
-            <img src="https://via.placeholder.com/300x200/FF6347/ffffff?text=Wohnungsentrümpelung" alt="Wohnungsentrümpelung">
+            <img src="https://source.unsplash.com/300x200/?apartment-clean" alt="Wohnungsentrümpelung">
             <h3>Wohnungsentrümpelung</h3>
-            <p>Wir bieten umfassende Entrümpelungsdienste für Wohnungen, vom Keller bis zum Dachboden. Ob Renovierung oder Umzug, wir kümmern uns um alles!</p>
+            <p>Wir bieten Ihnen eine schnelle und effiziente Entrümpelung für Ihre Wohnung, vom Keller bis zum Dachboden.</p>
         </div>
         <div class="service-item">
-            <img src="https://via.placeholder.com/300x200/32CD32/ffffff?text=Büroentrümpelung" alt="Büroentrümpelung">
+            <img src="https://source.unsplash.com/300x200/?office-clean" alt="Büroentrümpelung">
             <h3>Büroentrümpelung</h3>
-            <p>Organisieren Sie Ihr Büro neu! Wir helfen Ihnen, den Arbeitsplatz effizient zu entrümpeln und sorgen für einen produktiveren Raum.</p>
+            <p>Entrümpeln Sie Ihr Büro effizient und stressfrei – wir helfen Ihnen, Platz für Produktivität zu schaffen!</p>
         </div>
         <div class="service-item">
-            <img src="https://via.placeholder.com/300x200/1E90FF/ffffff?text=Haushaltsauflösungen" alt="Haushaltsauflösungen">
+            <img src="https://source.unsplash.com/300x200/?house-clearance" alt="Haushaltsauflösungen">
             <h3>Haushaltsauflösungen</h3>
-            <p>Ob nach einem Umzug oder aufgrund eines Todesfalls, wir kümmern uns diskret und schnell um die Auflösung von Haushalten.</p>
+            <p>Wir bieten Haushaltsauflösungen in jeder Größenordnung an. Diskret und zuverlässig!</p>
         </div>
     </section>
 
-    <section id="about">
-        <h2>Über uns</h2>
-        <p>Mit jahrelanger Erfahrung im Bereich Entrümpelung und Haushaltsauflösungen sind wir Ihr zuverlässiger Partner für alle Entsorgungsbedürfnisse. Wir bieten Ihnen effiziente, schnelle und umweltfreundliche Lösungen an.</p>
-        <img src="https://via.placeholder.com/600x400/FFD700/ffffff?text=Unser+Team" alt="Unser Team">
+    <section id="gallery" class="gallery">
+        <h2>Unsere Galerie</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://source.unsplash.com/300x200/?declutter1" alt="Bild 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://source.unsplash.com/300x200/?declutter2" alt="Bild 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://source.unsplash.com/300x200/?declutter3" alt="Bild 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://source.unsplash.com/300x200/?declutter4" alt="Bild 4">
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
+    <section id="about" class="about">
+        <h2>Über uns</h2>
+        <p>Wir sind ein Team von Fachleuten mit jahrelanger Erfahrung in der Entrümpelungsbranche. Unser Ziel ist es, Ihnen zu helfen, Platz zu schaffen und Ihren Raum effizient zu organisieren.</p>
+        <img src="https://source.unsplash.com/600x400/?team" alt="Unser Team">
+    </section>
+
+    <section id="contact" class="contact">
         <h2>Kontakt</h2>
         <form action="submit_form.php" method="POST">
             <label for="name">Ihr Name</label>
@@ -127,6 +124,18 @@
         </form>
         <p>Telefon: +49 172 8653183</p>
         <p>E-Mail: <a href="mailto:aidkijamet22@gmail.com">aidkijamet22@gmail.com</a></p>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>Häufige Fragen</h2>
+        <div class="faq-item">
+            <h3>Wie schnell können Sie meine Wohnung entrümpeln?</h3>
+            <p>In der Regel können wir in weniger als 24 Stunden mit der Entrümpelung beginnen, abhängig von der Größe der Wohnung.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Was passiert mit den alten Möbeln?</h3>
+            <p>Wir kümmern uns um die umweltgerechte Entsorgung und Spende von Möbeln, die noch in gutem Zustand sind.</p>
+        </div>
     </section>
 
     <footer>
