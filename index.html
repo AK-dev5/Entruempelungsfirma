@@ -1,62 +1,61 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Entrümpelung Aid Kijamet</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kijamet & Riess Entrümpelung</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header class="header">
+    <h1 class="title">Kijamet & Riess</h1>
+    <p class="subtitle">Entrümpelung leicht gemacht – Clearing made easy</p>
+  </header>
 
-<header>
-  <div class="logo">AK Entrümpelung</div>
-  <nav>
-    <a href="#services">Leistungen</a>
-    <a href="#contact">Kontakt</a>
-  </nav>
-</header>
+  <section class="intro">
+    <h2>Unsere Dienstleistungen / Our Services</h2>
+    <p>
+      Wir bieten professionelle Entrümpelungen für Wohnungen, Häuser, Büros und mehr. Egal ob Keller, Dachboden oder komplette Haushaltsauflösung – wir sind für Sie da. <br>
+      We provide professional clearing services for apartments, houses, offices and more. Whether it's a basement, attic or a full household clearance – we're here for you.
+    </p>
+  </section>
 
-<section class="hero">
-  <h1>Entrümpelung Aid Kijamet</h1>
-  <p>Professionelle Entrümpelung in Deutschland – schnell, zuverlässig & diskret.</p>
-  <a href="#contact" class="btn">Jetzt Kontakt aufnehmen</a>
-</section>
+  <section class="services">
+    <div class="card">Kostenlose Besichtigung<br><span>Free Inspection</span></div>
+    <div class="card">Schnelle Terminvergabe<br><span>Fast Scheduling</span></div>
+    <div class="card">Umweltgerechte Entsorgung<br><span>Eco-friendly Disposal</span></div>
+    <div class="card">Faire Festpreise<br><span>Fair Fixed Prices</span></div>
+  </section>
 
-<section id="services">
-  <h2>Unsere Leistungen / Our Services</h2>
-  <div class="info">
-    <div>
-      <h3>Deutsch</h3>
-      <ul>
-        <li>Haushaltsauflösungen</li>
-        <li>Keller- und Dachbodenentrümpelung</li>
-        <li>Büro- und Firmenauflösungen</li>
-        <li>Sperrmüllentsorgung</li>
-      </ul>
-    </div>
-    <div>
-      <h3>English</h3>
-      <ul>
-        <li>Household Clearances</li>
-        <li>Basement and Attic Cleanouts</li>
-        <li>Office and Business Clearouts</li>
-        <li>Bulk Waste Disposal</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  <section class="contact" id="kontakt">
+    <h2>Kontaktieren Sie uns / Contact Us</h2>
+    <form action="mailto:aidkijamet22@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Ihr Name / Your Name" required>
+      <input type="email" name="email" placeholder="Ihre E-Mail / Your Email" required>
+      <textarea name="message" placeholder="Ihre Nachricht / Your Message" required></textarea>
+      <button type="submit">Senden / Send</button>
+    </form>
+    <p class="contact-info">Oder rufen Sie uns an: <strong>+49 172 8653183</strong></p>
+  </section>
 
-<section id="contact">
-  <h2>Kontakt / Contact</h2>
-  <p><strong>Name:</strong> Aid Kijamet</p>
-  <p><strong>Email:</strong> <a href="mailto:aidkijamet22@gmail.com">aidkijamet22@gmail.com</a></p>
-  <p><strong>Telefon / Phone:</strong> <a href="tel:+491728653183">+49 172 8653183</a></p>
-</section>
+  <footer>
+    &copy; 2025 Kijamet & Riess Entrümpelung. Alle Rechte vorbehalten.
+  </footer>
 
-<footer>
-  <p>&copy; 2025 Aid Kijamet – Entrümpelung. All rights reserved.</p>
-</footer>
+  <script>
+    // Animations on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
 
+    document.querySelectorAll('.card, .intro, .contact').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
