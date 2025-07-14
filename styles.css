@@ -1,4 +1,4 @@
-/* Reset und Grundlegende Einstellungen */
+/* Grundlegende Einstellungen */
 * {
     margin: 0;
     padding: 0;
@@ -55,15 +55,15 @@ nav ul li a:hover {
     text-align: center;
     color: white;
     padding: 80px 20px;
-    background: url('https://via.placeholder.com/1600x600/FF6347/ffffff?text=Entrümpelung+Service') no-repeat center center/cover;
+    background: url('https://source.unsplash.com/1600x900/?cleaning') no-repeat center center/cover;
     background-attachment: fixed;
     transition: background 0.5s ease;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 20px;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .hero img {
@@ -76,4 +76,109 @@ nav ul li a:hover {
 .cta-button {
     background-color: #FF6347;
     color: white;
-    padding:
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e53e3e;
+}
+
+/* Services */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.service-item {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.service-item h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+/* Gallery */
+.gallery {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 23%;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
