@@ -1,90 +1,201 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professionelle Entrümpelungsdienste - Entrümpeln leicht gemacht!">
-    <title>Entrümpelungsservice Aid Kijamet</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrümpelung Aid Kijamet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #ff6b00;
+      --secondary-color: #1c1c1e;
+      --accent-color: #ffffff;
+      --bg-light: #f4f4f4;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--secondary-color);
+      background-color: var(--bg-light);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: var(--secondary-color);
+      color: var(--accent-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: var(--primary-color);
+    }
+
+    nav a {
+      color: var(--accent-color);
+      margin-left: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary-color);
+    }
+
+    .hero {
+      background: linear-gradient(rgba(28, 28, 30, 0.8), rgba(28, 28, 30, 0.8)),
+        url('https://images.unsplash.com/photo-1581091012184-7c54c2b8eced?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      color: var(--accent-color);
+      padding: 6rem 2rem;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      padding: 0.8rem 1.5rem;
+      background: var(--primary-color);
+      color: var(--accent-color);
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #e45c00;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--primary-color);
+    }
+
+    .info {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .info {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    footer {
+      background: var(--secondary-color);
+      color: var(--accent-color);
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <h1>Entrümpelungsservice Aid Kijamet</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Dienstleistungen</a></li>
-                <li><a href="#gallery">Galerie</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <div class="logo">AK Entrümpelung</div>
+  <nav>
+    <a href="#services">Leistungen</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Entrümpeln leicht gemacht!</h2>
-            <p>Ihr schneller und zuverlässiger Partner für Entrümpelungen. Wir kümmern uns um alles!</p>
-            <a href="#contact" class="cta-button">Jetzt anfragen</a>
-        </div>
-    </section>
+<section class="hero">
+  <h1>Entrümpelung Aid Kijamet</h1>
+  <p>Professionelle Entrümpelung in Deutschland – schnell, zuverlässig & diskret.</p>
+  <a href="#contact" class="btn">Jetzt Kontakt aufnehmen</a>
+</section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>Unsere Dienstleistungen</h2>
-        <div class="service-item">
-            <img src="images/wohnungsentruempelung.jpg" alt="Wohnungsentrümpelung">
-            <h3>Wohnungsentrümpelung</h3>
-            <p>Wir bieten Ihnen eine schnelle und effiziente Entrümpelung für Ihre Wohnung, vom Keller bis zum Dachboden.</p>
-        </div>
-        <div class="service-item">
-            <img src="images/bueroentruempelung.jpg" alt="Büroentrümpelung">
-            <h3>Büroentrümpelung</h3>
-            <p>Entrümpeln Sie Ihr Büro effizient und stressfrei – wir helfen Ihnen, Platz für Produktivität zu schaffen!</p>
-        </div>
-        <div class="service-item">
-            <img src="images/haushaltsaufloesung.jpg" alt="Haushaltsauflösungen">
-            <h3>Haushaltsauflösungen</h3>
-            <p>Wir bieten Haushaltsauflösungen in jeder Größenordnung an. Diskret und zuverlässig!</p>
-        </div>
-    </section>
+<section id="services">
+  <h2>Unsere Leistungen / Our Services</h2>
+  <div class="info">
+    <div>
+      <h3>Deutsch</h3>
+      <ul>
+        <li>Haushaltsauflösungen</li>
+        <li>Keller- und Dachbodenentrümpelung</li>
+        <li>Büro- und Firmenauflösungen</li>
+        <li>Sperrmüllentsorgung</li>
+      </ul>
+    </div>
+    <div>
+      <h3>English</h3>
+      <ul>
+        <li>Household Clearances</li>
+        <li>Basement and Attic Cleanouts</li>
+        <li>Office and Business Clearouts</li>
+        <li>Bulk Waste Disposal</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <h2>Unsere Galerie</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="images/bild1.jpg" alt="Bild 1">
-            </div>
-            <div class="gallery-item">
-                <img src="images/bild2.jpg" alt="Bild 2">
-            </div>
-            <div class="gallery-item">
-                <img src="images/bild3.jpg" alt="Bild 3">
-            </div>
-            <div class="gallery-item">
-                <img src="images/bild4.jpg" alt="Bild 4">
-            </div>
-        </div>
-    </section>
+<section id="contact">
+  <h2>Kontakt / Contact</h2>
+  <p><strong>Name:</strong> Aid Kijamet</p>
+  <p><strong>Email:</strong> <a href="mailto:aidkijamet22@gmail.com">aidkijamet22@gmail.com</a></p>
+  <p><strong>Telefon / Phone:</strong> <a href="tel:+491728653183">+49 172 8653183</a></p>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Kontakt</h2>
-        <p>Wenn Sie Fragen haben oder unseren Service in Anspruch nehmen möchten, erreichen Sie uns unter:</p>
-        <p><strong>E-Mail:</strong> <a href="mailto:kontakt@aidkijamet.de">kontakt@aidkijamet.de</a></p>
-        <p><strong>Telefon:</strong> <a href="tel:+491234567890">+49 123 4567890</a></p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Entrümpelungsservice Aid Kijamet. Alle Rechte vorbehalten.</p>
-        <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
-    </footer>
+<footer>
+  <p>&copy; 2025 Aid Kijamet – Entrümpelung. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
