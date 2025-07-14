@@ -164,3 +164,53 @@ nav ul li a:hover {
 
 .gallery-item:hover {
     transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2A4D7C; /* Dunkelblau */
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.contact a {
+    color: #ff6347; /* Korallenrot */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    color: #e53e3e; /* Dunkleres Rot */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ff6347; /* Korallenrot */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e53e3e; /* Dunkleres Rot */
+}
