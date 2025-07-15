@@ -9,6 +9,7 @@ body {
   background: linear-gradient(to right, #f3f3f3, #e7e7e7);
   color: #222;
   padding: 20px;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -22,6 +23,27 @@ header {
 
 h1 {
   font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav .btn {
+  background-color: #00aaff;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0 0.3rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+nav .btn:hover {
+  background-color: #0077aa;
 }
 
 section {
@@ -31,6 +53,14 @@ section {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 ul {
@@ -52,6 +82,21 @@ a:hover {
   text-decoration: underline;
 }
 
+.cta-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #00cc99;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #009977;
+}
+
 footer {
   text-align: center;
   background: #232931;
@@ -60,18 +105,6 @@ footer {
   border-radius: 10px;
   margin-top: 2rem;
   font-size: 0.9rem;
-}
-
-/* Animationen */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @keyframes slideDown {
@@ -85,20 +118,6 @@ footer {
   }
 }
 
-.hero, .info, .kontakt {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.hero.visible,
-.info.visible,
-.kontakt.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Für Smartphones */
 @media (max-width: 600px) {
   body {
     padding: 10px;
@@ -106,6 +125,11 @@ footer {
 
   h1 {
     font-size: 2rem;
+  }
+
+  nav .btn {
+    display: block;
+    margin: 0.5rem auto;
   }
 
   section {
