@@ -1,4 +1,4 @@
-// Animation der Features beim Scrollen
+// Animation beim Scrollen für die Features
 document.addEventListener('DOMContentLoaded', () => {
   const features = document.querySelectorAll('.feature');
 
@@ -15,5 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   window.addEventListener('scroll', revealFeatures);
-  revealFeatures(); // auch sofort prüfen beim Laden
+  revealFeatures(); // direkt beim Laden prüfen
 });
