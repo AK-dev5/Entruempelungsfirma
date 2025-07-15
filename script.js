@@ -1,19 +1,20 @@
-// Scroll-Animationen für Sektionen
+// Einfache Scroll-Animation (FadeIn)
 window.addEventListener('scroll', () => {
   document.querySelectorAll('section').forEach(section => {
-    const sectionPos = section.getBoundingClientRect().top;
-    const screenPos = window.innerHeight / 1.3;
-
-    if (sectionPos < screenPos) {
-      section.classList.add('visible');
+    const top = section.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      section.style.opacity = 1;
+      section.style.transform = 'translateY(0)';
+      section.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+    } else {
+      section.style.opacity = 0;
+      section.style.transform = 'translateY(30px)';
     }
   });
 });
 
-// Klickanimation für Kontaktlinks
-document.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    link.style.color = '#00cc99';
-    link.style.transition = 'color 0.3s ease';
-  });
+// Initiales Styling für Animation
+document.querySelectorAll('section').forEach(section => {
+  section.style.opacity = 0;
+  section.style.transform = 'translateY(30px)';
 });
