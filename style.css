@@ -1,67 +1,108 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
-  background: #f0f0f0;
+  background: #f7f9fc;
   color: #222;
+  line-height: 1.6;
+  padding: 20px;
 }
 
 header {
-  background: #344955;
-  color: white;
-  padding: 20px;
   text-align: center;
-  border-radius: 5px;
+  background-color: #344955;
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
-nav a {
+header nav a {
   color: white;
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
+header nav a:hover {
   text-decoration: underline;
 }
 
 section {
+  max-width: 700px;
+  margin: 2rem auto;
   background: white;
-  margin: 30px auto;
-  padding: 20px;
-  border-radius: 5px;
-  max-width: 600px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
 }
 
-.cta-button {
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding-left: 1.3rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00cc99;
+}
+
+a.btn {
   display: inline-block;
   background-color: #00cc99;
   color: white;
-  padding: 10px 15px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 1rem;
   text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
+a.btn:hover {
   background-color: #009977;
 }
 
 footer {
   text-align: center;
-  margin-top: 40px;
-  font-size: 0.9em;
-  color: #666;
+  margin: 3rem 0 1rem;
+  color: #555;
+  font-size: 0.9rem;
 }
 
-/* Responsiv */
+/* Responsive */
 @media (max-width: 600px) {
   body {
-    margin: 10px;
+    padding: 10px;
   }
 
   section {
-    margin: 15px auto;
-    padding: 15px;
+    margin: 1rem auto;
+    padding: 1.2rem;
   }
 }
