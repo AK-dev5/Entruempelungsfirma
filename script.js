@@ -1,11 +1,14 @@
-// Einfache Animation beim Scrollen anzeigen
-window.addEventListener('scroll', () => {
-  document.querySelectorAll('.info, .kontakt').forEach(section => {
-    const sectionPos = section.getBoundingClientRect().top;
-    const screenPos = window.innerHeight / 1.3;
+// Scroll Animation
+const sections = document.querySelectorAll('.fade-in');
 
-    if (sectionPos < screenPos) {
-      section.style.animation = 'fadeInUp 1s ease forwards';
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
     }
   });
+}, {
+  threshold: 0.3
 });
+
+sections.forEach(section => observer.observe(section));
