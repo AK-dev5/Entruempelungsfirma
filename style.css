@@ -85,7 +85,6 @@ footer {
   }
 }
 
-/* Sichtbar machen bei Scroll */
 .hero, .info, .kontakt {
   opacity: 0;
   transform: translateY(40px);
@@ -99,7 +98,7 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsive Design */
+/* Für Smartphones */
 @media (max-width: 600px) {
   body {
     padding: 10px;
