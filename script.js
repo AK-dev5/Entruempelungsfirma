@@ -1,14 +1,20 @@
-// Scroll Animation
-const sections = document.querySelectorAll('.fade-in');
+// Scroll-Animationen für Sektionen
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.info, .kontakt, .hero').forEach(section => {
+    const sectionPos = section.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 1.3;
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+    if (sectionPos < screenPos) {
+      section.classList.add('visible');
     }
   });
-}, {
-  threshold: 0.3
 });
 
-sections.forEach(section => observer.observe(section));
+// Klickanimation für Kontaktinfo
+const kontaktLinks = document.querySelectorAll('a');
+kontaktLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    link.style.color = '#00cc99';
+    link.style.transition = 'color 0.3s ease';
+  });
+});
