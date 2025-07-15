@@ -1,16 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const features = document.querySelectorAll('.feature');
+  // Smooth scrolling für Anker
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(anchor.getAttribute('href'))?.scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
 
-  function showFeatures() {
-    const trigger = window.innerHeight * 0.9;
-    features.forEach(feature => {
-      const top = feature.getBoundingClientRect().top;
-      if (top < trigger) {
-        feature.classList.add('visible');
+  // Scroll-Animation (Aufdecken)
+  const scrollElements = document.querySelectorAll('.card, .über-uns, .kontakt, .footer');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
     });
-  }
+  }, { threshold: 0.2 });
 
-  window.addEventListener('scroll', showFeatures);
-  showFeatures();
+  scrollElements.forEach(el => {
+    el.classList.add('before-visible');
+    observer.observe(el);
+  });
 });
