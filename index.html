@@ -2,85 +2,64 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kijamet & Riess Entrümpelung</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GitHub Entrümpelung | Kijamet & Riess</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Kijamet & Riess</h1>
-    <p>Entrümpelung in München – Schnell. Sauber. Zuverlässig.</p>
-    <nav>
-      <a href="#services">Leistungen</a>
-      <a href="#about">Über uns</a>
-      <a href="#contact">Kontakt</a>
-    </nav>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Digitale Entrümpelung leicht gemacht</h1>
+      <p>Wir entrümpeln dein GitHub professionell, effizient & sicher.</p>
+      <a href="#kontakt" class="btn">Jetzt Kontakt aufnehmen</a>
+    </div>
   </header>
 
-  <section id="hero">
-    <h2>Professionelle Entrümpelung in München</h2>
-    <p>Wir machen Platz für Neues – ob Wohnung, Keller oder Büro!</p>
-    <a href="#contact" class="btn">Kostenloses Angebot anfordern</a>
-  </section>
-
-  <section id="services" class="fade-in">
-    <h2>Unsere Leistungen / Our Services</h2>
-    <div class="services-grid">
-      <div class="card">
-        <h3>Haushaltsauflösung</h3>
-        <p>Komplette Haushaltsauflösungen – diskret, schnell und stressfrei.</p>
+  <section class="funktionen">
+    <h2>Unsere Leistungen</h2>
+    <div class="features">
+      <div class="feature animate fade-in">
+        <div class="icon icon-cleanup"></div>
+        <h3>Code-Analyse</h3>
+        <p>Wir durchleuchten deine Repositories und entfernen Altlasten.</p>
       </div>
-      <div class="card">
-        <h3>Keller & Garage</h3>
-        <p>Wir schaffen Platz in Keller, Garage oder Dachboden – umweltgerecht entsorgt.</p>
+      <div class="feature animate slide-in">
+        <div class="icon icon-security"></div>
+        <h3>Sicherheits-Check</h3>
+        <p>Alte Tokens und Sicherheitslücken? Wir machen Schluss damit.</p>
       </div>
-      <div class="card">
-        <h3>Firmenauflösung</h3>
-        <p>Büros, Läden oder Werkstätten – alles wird sauber geräumt.</p>
-      </div>
-      <div class="card">
-        <h3>Messie-Wohnungen</h3>
-        <p>Wir helfen einfühlsam und professionell bei besonderen Fällen.</p>
+      <div class="feature animate fade-in">
+        <div class="icon icon-structure"></div>
+        <h3>Optimierung</h3>
+        <p>Struktur, Doku, README - alles modern und ordentlich.</p>
       </div>
     </div>
   </section>
 
-  <section id="about" class="fade-in">
-    <h2>Über Uns / About Us</h2>
-    <p>
-      Kijamet & Riess ist Ihr freundliches Entrümpelungsteam aus München.
-      Faire Preise, transparente Angebote und saubere Arbeit sind unsere Philosophie.
+  <section class="firma">
+    <h2>Wer wir sind</h2>
+    <p class="kerntext animate pop-in">
+      Endlich Ordnung im Code! <strong>Kijamet & Riess</strong> aus München bringen Struktur, Effizienz und Sicherheit in dein GitHub. Ob Freelancer oder Unternehmen - wir machen digitalen Frühjahrsputz.
     </p>
-    <p>
-      We are a reliable and friendly clearing team based in Munich, Germany.
-      We value fair pricing, clean results, and customer satisfaction.
+    <p class="translate">
+      Finally, clean code! Kijamet & Riess from Munich bring structure, efficiency, and security to your GitHub repositories.
     </p>
   </section>
 
-  <section id="contact" class="fade-in">
-    <h2>Kontakt aufnehmen / Contact Us</h2>
-    <form action="mailto:aidkijamet22@gmail.com" method="POST" enctype="text/plain">
-      <label for="name">Ihr Name / Your Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Ihre E-Mail / Your Email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Ihre Nachricht / Your Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Nachricht senden</button>
-    </form>
-    <div class="contact-info">
-      <p>📍 München, Deutschland</p>
-      <p>📧 aidkijamet22@gmail.com</p>
-      <p>📞 +49 172 8653183</p>
-    </div>
+  <section id="kontakt" class="kontakt">
+    <h2>Kontakt</h2>
+    <p class="animate fade-in">Aid Kijamet</p>
+    <ul>
+      <li><strong>Telefon:</strong> <a href="tel:+491728653183">+49 172 8653183</a></li>
+      <li><strong>Email:</strong> <a href="mailto:kijametriess@outlook.de">kijametriess@outlook.de</a></li>
+    </ul>
   </section>
 
   <footer>
-    <p>&copy; 2025 Kijamet & Riess – Entrümpelung München</p>
+    <p>&copy; 2025 Kijamet & Riess | GitHub Entrümpelung aus München</p>
   </footer>
 </body>
 </html>
